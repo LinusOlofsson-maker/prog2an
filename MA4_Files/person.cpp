@@ -25,7 +25,7 @@ void Person::set(int n){
 
 int Person::fib(){
 	int n = age;
-	if int(n <= 1)
+	if(n <= 1)
 		return n
 	return fib(n - 1) + fib(n - 2)
 }
