@@ -38,6 +38,7 @@ int Person::fib(){
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
 	int Person_get(Person* person) {return person->get();}
+	int Person_fib(Person* person) {return person->fib();}
 	void Person_set(Person* person, int n) {person->set(n);}
 	void Person_delete(Person* person){
 		if (person){
