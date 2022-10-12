@@ -26,8 +26,8 @@ void Person::set(int n){
 int Person::fib(){
 	int n = age;
 	if(n <= 1)
-		return n
-	return fib(n - 1) + fib(n - 2)
+		return n;
+	return fib(n - 1) + fib(n - 2);
 }
 
 extern "C"{
