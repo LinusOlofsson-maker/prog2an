@@ -1,11 +1,12 @@
 #include <cstdlib>
-// Person class 
+// *Person class 
 
 class Person{
 	public:
 		Person(int);
 		int get();
 		void set(int);
+		int fib(age);
 	private:
 		int age;
 	};
@@ -22,6 +23,12 @@ void Person::set(int n){
 	age = n;
 	}
 
+int Person::fib(){
+	int n = age;
+	if int(n <= 1)
+		return n
+	return fib(n - 1) + fib(n - 2)
+}
 
 extern "C"{
 	Person* Person_new(int n) {return new Person(n);}
