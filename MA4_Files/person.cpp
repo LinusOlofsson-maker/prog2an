@@ -22,12 +22,17 @@ int Person::get(){
 void Person::set(int n){
 	age = n;
 	}
+int _fib(int n){
 
-int Person::fib(){
-	int n = age;
 	if(n <= 1)
 		return n;
 	return fib(n - 1) + fib(n - 2);
+
+}
+
+int Person::fib(){
+
+	return _fib(age);
 }
 
 extern "C"{
