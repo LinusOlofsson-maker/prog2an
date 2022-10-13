@@ -24,8 +24,8 @@ def fib(n):
 
 
 def main():
-	n = 20
-	k = 20
+	n = 30
+	k = 30
 	fc = []
 	fib_njit = []
 	f = Person(5)
@@ -45,7 +45,7 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
-	print(f'For a njit function for fib with value {n} it is: {fib_njit} and it took {end - start} seconds')
+	print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
 
 if __name__ == '__main__':
