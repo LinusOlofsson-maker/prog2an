@@ -25,8 +25,8 @@ def fib(n):
 
 
 def main():
-	n = 30
-	k = 30
+	n = 1
+	k = 1
 	fc = []
 	fib_njit = []
 	f = Person(5)
@@ -41,7 +41,7 @@ def main():
 		fc.append(fib_classic(n))
 		n += 1
 	end = pc()
-	ax.plt(n,fc)
+	ax.plot(n,fc)
 	ax.set_xlabel(' " n " ')
 	ax.set_ylabel(' " time " ')
 	fig.savefig('full_figure1.png')
@@ -53,7 +53,7 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
-	ax1.plt(n, fib_njit)
+	ax1.plot(n, fib_njit)
 	ax1.set_xlabel(' " n " ')
 	ax1.set_ylabel(' " time " ')
 	fig.savefig('full_figure2.png')
