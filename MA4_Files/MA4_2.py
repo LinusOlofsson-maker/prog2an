@@ -27,6 +27,7 @@ def fib(n):
 def main():
 	n = 1
 	k = 1
+	j = 1
 	fc = []
 	fib_njit = []
 	f_person = []
@@ -40,9 +41,14 @@ def main():
 	start = pc()
 	for i in range(15):
 		fc.append(fib_classic(n))
-		f_person.append(Person(n))
 		n += 1
 	end = pc()
+
+	for i in range(15):
+		f= f.Person(j)
+		f_person.append(f.fib())
+		j+=1
+
 	ax.plot(range(15),fc,'b')
 	ax.plot(range(15),f_person,'r')
 	ax.set_xlabel(' " n " ')
