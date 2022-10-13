@@ -37,7 +37,7 @@ def main():
 	print(f.get())
 	print(f.fib())
 
-	stepper = range(30,46)
+	stepper = range(1,21)
 
 	for i in stepper:
 		# Clasic fib
@@ -55,8 +55,14 @@ def main():
 		f.fib()
 		f_person.append(pc()-start)
 
+	start = pc()
+	fib(47)
+	end = pc()
 
-
+	person = Person(47)
+	start_c = pc()
+	person.fib()
+	end_c = pc()
 	"""
 	for i in range(15):
 		f = Person(j)
@@ -75,13 +81,14 @@ def main():
 		k += 1
 	end = pc()
 	"""
-	plt.plot(stepper, fc, 'b')
+	plt.plot(stepper, fc, 'b-o')
 	plt.plot(stepper, f_person, 'r')
 	plt.plot(stepper, fib_njit,'k')
-	plt.xlabel(' " n " ')
+	plt.grid()
+	plt.xlabel(f' " n "\nfor Numba to calculate fib(47) it takes: {end-start}\nfor c++ to calculate fib(47) it takes: {end_c-start_c}  ')
 	plt.ylabel('  time  ')
 	plt.legend([f'fibonacci_python','f_person','fibonacci_Njit'])
-	plt.savefig('time_test_30_to_45.png')
+	plt.savefig('time_test_1_to_20.png')
 
 	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
