@@ -60,14 +60,14 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
-	fig, ax = plt.subplots()
-	ax.plot(range(15), fc, 'b')
-	ax.plot(range(15), f_person, 'r')
-	ax.plot(range(15), fib_njit,'k')
-	ax.set_xlabel(' " n " ')
-	ax.set_ylabel(' " time " ')
-	ax.legend([f'Fibonacci_python','F_person','Fibonacci_Njit'])
-	fig.savefig('full_figure.png')
+
+	plt.plot(range(15), fc, 'b')
+	plt.plot(range(15), f_person, 'r')
+	plt.plot(range(15), fib_njit,'k')
+	plt.xlabel(' " n " ')
+	plt.ylabel(' " time " ')
+	plt.legend([f'Fibonacci_python','F_person','Fibonacci_Njit'])
+	plt.savefig('full_figure.png')
 
 	print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
