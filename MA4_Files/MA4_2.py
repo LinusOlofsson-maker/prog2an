@@ -45,9 +45,9 @@ def main():
 	end = pc()
 
 	for i in range(15):
-		f= f.Person(j)
+		f = Person(j)
 		f_person.append(f.fib())
-		j+=1
+		j += 1
 
 	ax.plot(range(15),fc,'b')
 	ax.plot(range(15),f_person,'r')
