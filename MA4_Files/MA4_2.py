@@ -81,7 +81,7 @@ def main():
 	plt.xlabel(' " n " ')
 	plt.ylabel('  time  ')
 	plt.legend([f'Fibonacci_python','F_person','Fibonacci_Njit'])
-	plt.savefig('Time_test_30_to_45.png')
+	plt.savefig('time_test_30_to_45.png')
 
 	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
