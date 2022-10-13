@@ -36,7 +36,7 @@ def main():
 	f.set(7)
 	print(f.get())
 	print(f.fib())
-	fig, ax = plt.subplots()
+
 
 	start = pc()
 	for i in range(15):
@@ -49,10 +49,8 @@ def main():
 		f_person.append(f.fib())
 		j += 1
 
-	ax.plot(range(15),fc,'b')
-	ax.plot(range(15),f_person,'r')
-	ax.set_xlabel(' " n " ')
-	ax.set_ylabel(' " time " ')
+
+
 	#fig.savefig('full_figure1.png')
 	print(f'For a pythonic fib value of {n} it is: {fc} and it took {end-start} seconds')
 	print(' ')
@@ -62,11 +60,15 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
+	fig, ax = plt.subplots()
+	ax.plot(range(15), fc, 'b')
+	ax.plot(range(15), f_person, 'r')
 	ax.plot(range(15), fib_njit,'k')
 	ax.set_xlabel(' " n " ')
 	ax.set_ylabel(' " time " ')
 	ax.legend([f'Fibonacci_python','F_person','Fibonacci_Njit'])
 	fig.savefig('full_figure.png')
+
 	print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
 
