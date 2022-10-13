@@ -41,7 +41,7 @@ def main():
 		fc.append(fib_classic(n))
 		n += 1
 	end = pc()
-	ax.plot(n,fc)
+	ax.plot(range(15),fc)
 	ax.set_xlabel(' " n " ')
 	ax.set_ylabel(' " time " ')
 	fig.savefig('full_figure1.png')
@@ -53,7 +53,7 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
-	ax1.plot(n, fib_njit)
+	ax1.plot(range(15), fib_njit)
 	ax1.set_xlabel(' " n " ')
 	ax1.set_ylabel(' " time " ')
 	fig.savefig('full_figure2.png')
