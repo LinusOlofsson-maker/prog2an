@@ -37,13 +37,27 @@ def main():
 	print(f.get())
 	print(f.fib())
 
+	stepper = range(1,15)
 
-	start = pc()
-	for i in range(15):
-		fc.append(fib_classic(n))
-		n += 1
-	end = pc()
+	for i in stepper:
+		# Clasic fib
+		steg_tid = pc()
+		start = pc()
+		fib_classic(i)
+		fc.append(pc()-start)
+		# Njit fib
+		start = pc()
+		fib(i)
+		fib_njit.append(pc()-start)
+		# f.Person()
+		f = Person(i)
+		start = pc()
+		f.fib()
+		f_person.append(pc()-start)
 
+
+
+	"""
 	for i in range(15):
 		f = Person(j)
 		f_person.append(f.fib())
@@ -60,16 +74,16 @@ def main():
 		fib_njit.append(fib(k))
 		k += 1
 	end = pc()
-
-	plt.plot(range(15), fc, 'b')
-	plt.plot(range(15), f_person, 'r')
-	plt.plot(range(15), fib_njit,'k')
+	"""
+	plt.plot(stepper, fc, 'b')
+	plt.plot(stepper, f_person, 'r')
+	plt.plot(stepper, fib_njit,'k')
 	plt.xlabel(' " n " ')
-	plt.ylabel(' " time " ')
+	plt.ylabel('  time  ')
 	plt.legend([f'Fibonacci_python','F_person','Fibonacci_Njit'])
-	plt.savefig('full_figure.png')
+	plt.savefig('Time_test(1->15).png')
 
-	print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
+	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
 
 if __name__ == '__main__':
