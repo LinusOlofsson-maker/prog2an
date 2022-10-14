@@ -37,7 +37,7 @@ def main():
 	print(f.get())
 	print(f.fib())
 
-	stepper = range(1,21)
+	stepper = range(30,46)
 
 	for i in stepper:
 		# Clasic fib
@@ -89,7 +89,7 @@ def main():
 	plt.xlabel(f' " n "  ')
 	plt.ylabel('  time  ')
 	plt.legend([f'fibonacci_python','f_person','fibonacci_Njit'])
-	plt.savefig('time_test_1_to_20.png')
+	plt.savefig('Presentations.png')
 
 	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
 
