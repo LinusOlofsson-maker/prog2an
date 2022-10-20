@@ -55,14 +55,13 @@ def main():
 		f.fib()
 		f_person.append(pc()-start)
 
-	start = pc()
-	fib(47)
-	end = pc()
+
+	fib_val = fib(47)
 
 	person = Person(47)
-	start_c = pc()
-	person.fib()
-	end_c = pc()
+
+	person_val = person.fib()
+
 	"""
 	for i in range(15):
 		f = Person(j)
@@ -82,13 +81,13 @@ def main():
 	end = pc()
 	"""
 	plt.plot(stepper, fc, 'b-o')
-	plt.plot(stepper, f_person, 'r')
+	#plt.plot(stepper, f_person, 'r')
 	plt.plot(stepper, fib_njit,'k')
 	plt.grid()
-	plt.title(f'for Numba to calculate fib(47) it takes: {end-start}\nfor c++ to calculate fib(47) it takes: {end_c-start_c}')
+	plt.title(f'for Numba to calculate fib(47) it returns: {fib_val}\nfor c++ to calculate fib(47) it takes: {person_val}')
 	plt.xlabel(f' " n "  ')
 	plt.ylabel('  time  ')
-	plt.legend([f'fibonacci_python','f_person','fibonacci_Njit'])
+	plt.legend([f'fibonacci_python','fibonacci_Njit'])
 	plt.savefig('Presentations.png')
 
 	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
