@@ -87,7 +87,7 @@ def main():
 	plt.title(f'for Numba to calculate fib(47) it returns: {fib_val}\nfor c++ to calculate fib(47) it takes: {person_val}')
 	plt.xlabel(f' " n "  ')
 	plt.ylabel('  time  ')
-	plt.legend([f'fibonacci_python','fibonacci_Njit'])
+	plt.legend([f'Fibonacci_python','Fibonacci_Njit'])
 	plt.savefig('Presentations.png')
 
 	#print(f'For a njit function for fib with value {k} it is: {fib_njit} and it took {end - start} seconds')
