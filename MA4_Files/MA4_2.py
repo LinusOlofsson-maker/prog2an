@@ -37,7 +37,7 @@ def main():
 	print(f.get())
 	print(f.fib())
 
-	stepper = range(30,46)
+	stepper = range(20,30)
 
 	for i in stepper:
 		# Clasic fib
@@ -56,11 +56,11 @@ def main():
 		f_person.append(pc()-start)
 
 
-	fib_val = fib(47)
+	#fib_val = fib(47)
 
-	person = Person(47)
+	#person = Person(47)
 
-	person_val = person.fib()
+	#person_val = person.fib()
 
 	"""
 	for i in range(15):
@@ -84,7 +84,7 @@ def main():
 	#plt.plot(stepper, f_person, 'r')
 	plt.plot(stepper, fib_njit,'k')
 	plt.grid()
-	plt.title(f'for Numba to calculate fib(47) it returns: {fib_val}\nfor c++ to calculate fib(47) it takes: {person_val}')
+	#plt.title(f'for Numba to calculate fib(47) it returns: {fib_val}\nfor c++ to calculate fib(47) it takes: {person_val}')
 	plt.xlabel(f' " n "  ')
 	plt.ylabel('  time  ')
 	plt.legend([f'Fibonacci_python','Fibonacci_Njit'])
